@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+/*mobile해상도 서식*/
+
+@media screen and (max-width: 767px){
+
+    /*헤더*/
+    header{
+        position: absolute;
+        width: 100%;
+        z-index: 100;
+    }
+    header h1{
+        position: absolute;
+        top: 20px;
+        width: 300px;
+    }
+    header h1 img{width: 100%;}
+
+    /*내비게이션*/
+    header nav{
+        position: fixed; top: 60px;
+        width: 100%; height: 100%;
+        z-index: 1001;
+
+        display: none; /**/
+    }
+    .gnb{
+        padding-top: 70px; left: 5%; /*(전체100%-ul90%)/2=5%*/
+        /*display: flex;*/
+        flex-direction: column;
+        align-items: center;
+        
+        display: none; /**/
+    }
+    .gnb > ul{
+        display: block; width: 90%;
+        
+        
+    }
+    .gnb > li{
+        text-align: center;
+        position: relative;
+
+        width: 100%;
+    }
+    .gnb > ul > li > a{
+        display: block;
+        background: #fff;
+        color: #333; /**/
+        line-height: 260%;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .sub{
+        position: absolute;
+        left: 0%; /*width: 90%;*/
+        display: none;
+        z-index: 100;
+        border: 1px solid #ccc;
+        
+        box-sizing: border-box;
+        border-radius: 0px;
+        background: #e8e8e8;
+        padding: 6px 1px;
+    }
+    .sub li a{
+        background: #e8e8e8;
+        line-height: 220%;
+        font-size: 0.8rem;
+    }
+    .gnb li:first-child .sub a,.gnb li:nth-child(2) .sub a{
+        padding: 0px;
+    }
+    .gnb li:first-child .sub{width: 100%;}
+    .gnb li:nth-child(2) .sub{width: 100%;}
+    .gnb li:nth-child(3) .sub{width: 100%;}
+    .gnb li:nth-child(4) .sub{width: 100%;}
+
+    /*토글버튼*/
+    #toggle{
+        display: block;
+        background: #ff8900;
+        padding: 8px;
+        position: absolute; right: 3%; top: 24px;
+        width: 32px; height: 32px;
+
+        z-index: 9999;
+    }
+    #toggle span{
+        background: #fff;
+        display: inline-block;
+        width: 32px; height: 2px;
+        background: #fff;
+        position: absolute;
+        transition: 0.5s;
+    }
+    #toggle span:first-child{top: 12px;}
+    #toggle span:nth-child(2){top: 22px;}
+    #toggle span:last-child{bottom: 12px;}
+    .rotate1{
+        transform: rotate(45deg);
+        left: 9px; top: 23px !important;
+    }
+    .rotate2{
+        transform: rotate(-45deg);
+        right: 7px;
+        bottom: 23px !important;
+    }
+    .bgcolor{background: rgba(18,18,18,.8) !important;}
+
+
+
+
+
+
+
+
+
+
+
+    /*메인*/
+    /*1. 메인배너*/
+    .visual{
+        height: 560px;
+        background: #f00;
+    }
+    .visual div img{
+        width: 270%; height: 560px;
+        object-fit: cover;
+        transform: translateX(-200px);
+    }
+    .visual .s_btn{
+        top: 83%; left: 4.5%;
+    }
+    /*2. 뉴스컨텐츠*/
+    .news_con{
+        width: 100%;
+        display: block;
+    }
+    .news_con article{
+        height: auto;
+        padding: 2%;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+    .news_con article > h2{font-size: 36px;}
+    .news_con article > h2 > span{
+        font-size: 20px;
+    }
+    .news_con article > h2 > img{width: 210px;}
+    .youtube, .news_list{width: 100%;}
+
+
+    /*3. 탭컨텐츠*/
+    .tab_con article{
+        width: 100%;
+        height: 900px;
+        background-size: 400px;
+        background-position: center bottom;
+    }
+    .tab_con article > h2{text-align: center;}
+    .tab_con_wrap{
+        display: block;
+        padding-top: 20px;
+    }
+    .tab_con_wrap > li > a{
+        display: block;
+        line-height: 180%;
+    }
+    .tab_con_wrap > li > a .fa-angle-down{
+        display: inline;
+        float: right;
+    }
+    .tab_con_wrap > li > div{
+        position: static;
+        width: 100%; height: 200px;
+
+        padding: 20px 15px;
+        border: 1px solid #888888;
+        border-top: none;
+        box-sizing: border-box;
+        background: #fff;
+    }
+    .tab_con_wrap > li > .con03{
+        height: 530px;
+        background: #f1f1f1;
+    }
+    .con03 > img{
+        width: 75%;
+    }
+
+    .act{background:#ff8900 !important;}
+    .act01{transform: rotate(180deg) !important;}
+
+
+    /*4. 인기제품*/
+    .best_product article{width: 100%; text-align: center;}
+    .best_product ul{
+        display: block;
+        width: 90%; margin: 0px auto;
+    }
+    .title2{text-align: center;}
+    .best_product ul > li{width: 100%;}
+    .best_product ul > li > img{width: 60%;}
+    .best_product h3, .best_product p{text-align: left;}
+
+
+    /*5. 이벤트*/
+    .event{width: 95%; padding: 40px 0px;}
+    .es_wrap{width: 300%;}
+    .es_wrap > div{padding-bottom: 20px;}
+    .es_wrap > div img{width: 100%;}
+    .e_slide a{display: block;}
+    .lrbtn{top: -160px;}
+    .lrbtn i.fa-angle-left{left: 1%;}
+    .lrbtn i.fa-angle-right{right: 1%;}
+
+    .e_slide .e_txt{padding: 40px 0px 0px 30px;}
+
+
+    /*6. 스토리갤러리*/
+    .gallery article{
+        width:100%;
+        padding: 40px 0px;
+    }
+    .gallery article h2{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .girl {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+    }
+    figure{height: 300px; margin-bottom: 10px;}
+    figure:nth-child(3){
+        height: 650px;
+        /*height: 300px; object-fit: contain;*/
+    }
+    figure figcaption{
+        transform: translate(0px, -81px);
+    }
+    .girl figcaption{
+        transition: none;
+        background-color: rgba(0,0,0,.8);
+    }
+
+
+    /*푸터*/
+    .f_inner{padding-left: 5%;}
+    .f_inner > nav{
+        width: 90%;
+        margin: 0px auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .f_inner > nav dl{width: 50%; padding-bottom: 10px;}
+
+    footer .sns{padding-top: 30px;}
+
+    address{display: block;}
+
+    address{
+        text-align: center;
+        height: 80px;
+        padding: 10px 0px;
+    }
+    address h2{
+        width: 100%;
+        padding: 0px;
+    }
+    address p{
+        line-height: 50px;
+    }
+    address h2 img{
+        width: 140px;
+        padding-top: 10px;
+    }
+}
+
+/*갤러리 해상도별 사이즈 조정*/
+@media screen and (max-width: 767px){
+    figure{height: 496px;}
+    figure:nth-child(3) figcaption{
+        transform: translate(0px, -480px);
+    }
+}
+@media screen and (max-width: 690px){
+    figure{height: 442px;}
+    figure:nth-child(3) figcaption{
+        transform: translate(0px, -369px);
+    }
+}
+@media screen and (max-width: 500px){
+    figure{height: 300px;}
+    figure:nth-child(3) figcaption{
+        transform: translate(0px, -81px);
+    }
+}
